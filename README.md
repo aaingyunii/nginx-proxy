@@ -59,7 +59,7 @@ I'm ff9bf2c3bb14
 
 2. Open whoami.example in your browser
 
-    ![image](https://github.com/dj-twenty-six/auto-reverse-proxy/assets/31847834/69629936-19ed-4c7a-b3d6-31d2f9935780)
+    ![image](https://github.com/aaingyunii/nginx-proxy/assets/31847834/0ca06a77-6d44-4933-a754-02950eb545a0)
 
 ### docker stats
 - Display a live stream of container(s) resource usage statistics
