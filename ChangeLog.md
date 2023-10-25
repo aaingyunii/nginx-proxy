@@ -7,4 +7,8 @@
 
 ### v0.2.0
 - [x] update README.md
+- [x] scale out&in
 
+### v0.3.0
+- [x] update README.md
+- [x] scale up&down
