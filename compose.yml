@@ -7,7 +7,14 @@ services:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-  
+    deploy:
+      resources:
+        limits:
+          cpus: '0.30'
+          memory: 100M
+        reservations:
+          cpus: '0.01'
+          memory: 30M
 
   whoami:
     image: jwilder/whoami
