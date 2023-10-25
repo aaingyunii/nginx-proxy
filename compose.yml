@@ -7,6 +7,7 @@ services:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+  
 
   whoami:
     image: jwilder/whoami
@@ -15,4 +16,13 @@ services:
     environment:
       - VIRTUAL_HOST=whoami.example
       - VIRTUAL_PORT=8000
-      
+    deploy:
+      mode: replicated
+      replicas: 2 # https://docs.docker.com/compose/compose-file/deploy/#replicas
+      resources:  # https://docs.docker.com/compose/compose-file/compose-file-v3/#resources
+        limits:
+          cpus: '0.05'
+          memory: 10M
+        reservations:
+          cpus: '0.01'
+          memory: 6M
