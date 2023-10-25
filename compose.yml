@@ -25,7 +25,7 @@ services:
       - VIRTUAL_PORT=8000
     deploy:
       mode: replicated
-      replicas: 2 # https://docs.docker.com/compose/compose-file/deploy/#replicas
+      replicas: 1 # https://docs.docker.com/compose/compose-file/deploy/#replicas
       resources:  # https://docs.docker.com/compose/compose-file/compose-file-v3/#resources
         limits:
           cpus: '0.05'
@@ -37,31 +37,31 @@ services:
   my-blog:
     image: aaingyunii/aaingyunii.github.io:latest
     expose:
-      - "8000"
+      - "80"
     environment:
-      - VIRTUAL_HOST=member.blog.io
-      - VIRTUAL_PORT=8000
+      - VIRTUAL_HOST=api.aik.io
+      - VIRTUAL_PORT=80
 
   baam:
     image: baamboo/baamsoo.github.io:1.4.0
     expose:
-      - "8001"
+      - "80"
     environment:
       - VIRTUAL_HOST=abc.google.com
-      - VIRTUAL_PORT=8001
+      - VIRTUAL_PORT=80
 
   jiugnim:
     image:  jiugnim/sam1000wongithubio
     expose:
-      - "8002"
+      - "80"
     environment:
-      - VIRTUAL_HOST=def.naver.com
-      - VIRTUAL_PORT=8002
+      - VIRTUAL_HOST=zxc.naver.com
+      - VIRTUAL_PORT=80
 
   minjung:
     image:  minjung818/minjung00.github.io:1.4.0
     expose:
-      - "8003"
+      - "80"
     environment:
-      - VIRTUAL_HOST=ghi.daum.net
-      - VIRTUAL_PORT=8003
+      - VIRTUAL_HOST=kgb.cia.go.kr
+      - VIRTUAL_PORT=80
