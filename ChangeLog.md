@@ -16,8 +16,8 @@
 ### v0.4.0
 - [x] routing multi domain
 
-whoami - VIRTUAL_HOST=whoami.example
-my-blog - VIRTUAL_HOST=api.aik.io
-baam - VIRTUAL_HOST=abc.google.com
-jiugnim - VIRTUAL_HOST=zxc.naver.com 
+whoami - VIRTUAL_HOST=whoami.example <br>
+my-blog - VIRTUAL_HOST=api.aik.io <br>
+baam - VIRTUAL_HOST=abc.google.com <br>
+jiugnim - VIRTUAL_HOST=zxc.naver.com <br>
 minjung - VIRTUAL_HOST=kgb.cia.go.kr
