@@ -13,9 +13,9 @@
 # $ docker compose up -d --build --force-recreate
 $ docker compose up -d
 [+] Running 3/3
- ✔ Network dj-twenty-sixgithubio_default       Created                              0.1s
- ✔ Container dj-twenty-sixgithubio-homepage-1  Started                              0.0s
- ✔ Container dj-twenty-sixgithubio-nginx-lb-1  Started                              0.0s
+ ✔  Network nginx-proxy_default           Created                              0.1s
+ ✔  Container nginx-proxy-homepage-aik-1  Started                              0.0s
+ ✔  Container nginx-proxy-nginx-proxy-1   Started                              0.0s
 ```
 
 ### Performance test
@@ -50,4 +50,5 @@ primary_region = "nrt"
   processes = ["app"]
 
 $ fly deploy
+
 ```
