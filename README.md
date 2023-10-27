@@ -18,6 +18,22 @@ $ docker compose up -d
  ✔  Container nginx-proxy-nginx-proxy-1   Started                              0.0s
 ```
 
+- **`date;docker stats --no-stream;echo "vuser=0";`**
+
+```bash
+$  date;docker stats --no-stream;echo "vuser=0";
+Fri Oct 27 17:25:01 KST 2023
+CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O       BLOCK I/O   PIDS
+6e83960eeab2   mproxy                0.00%     7.414MiB / 10MiB    74.14%    1.02kB / 0B   0B / 0B     10
+2a8c6a91b34e   bmt_lb-homepage_1-1   0.00%     27.01MiB / 30MiB    90.04%    1.32kB / 0B   0B / 0B     82
+vuser=0
+
+# 날짜, vuser가 지정한 수 였을 때, docker stats 보여줌
+## nGrinder 테스트 과정에서 에러가 발생한 순간이나
+### 성능이 안좋은 부분의 stats를 확인하고 그에 맞춰 scale-out/up 등의 처리를 진행할 수 있다.
+```
+
+
 ### Performance test
 
 - https://github.com/aaingyunii/nginx-proxy/pull/7
