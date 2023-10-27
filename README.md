@@ -22,5 +22,7 @@ $ docker compose up -d
 
 - https://github.com/aaingyunii/nginx-proxy/pull/7
 
-- Best case : https://github.com/aaingyunii/nginx-proxy/pull/7#issuecomment-1782248478
+- Result : https://github.com/aaingyunii/nginx-proxy/pull/7#issuecomment-1782313964
+
+
 
