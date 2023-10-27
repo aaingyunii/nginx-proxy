@@ -12,3 +12,16 @@
 ### v0.3.0
 - [x] update README.md
 - [x] scale up&down
+
+### v0.4.0
+- [x] routing multi domain
+
+whoami - VIRTUAL_HOST=whoami.example
+my-blog - VIRTUAL_HOST=api.aik.io
+baam - VIRTUAL_HOST=abc.google.com
+jiugnim - VIRTUAL_HOST=zxc.naver.com
+minjung - VIRTUAL_HOST=kgb.cia.go.kr
+
+### v0.5.0
+- [x] using nGrinder
+- [x] Performance test with scale out-in and up-down
