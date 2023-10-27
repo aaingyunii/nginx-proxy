@@ -25,4 +25,29 @@ $ docker compose up -d
 - Result : https://github.com/aaingyunii/nginx-proxy/pull/7#issuecomment-1782313964
 
 
+### Deploy fly.io
 
+- https://homepage-aaingyunii.fly.dev/
+
+```bash
+$ fly auth login
+
+$ flyctl launch
+
+$ tail -n 13  fly.toml
+app = "homepage-aaingyunii"
+primary_region = "nrt"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[http_service]
+  internal_port = 80
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 3
+  processes = ["app"]
+
+$ fly deploy
+```
