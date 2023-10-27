@@ -38,9 +38,25 @@ $ ~/app/ng/ngrinder-agent/run_agent.sh
 - 잘 통신이 되는 지 확인하면서
 - `Perfomance` 의 정도를 테스트.
 
-### REF
+### docker stats 2 CSV
 
-- https://github.com/dj-twenty-six/auto-reverse-proxy/pull/5
+- docker container resource usage statistics -> csv log
 
-### `Pull requests` 에 해당 학습 내용들이 담김
+```bash
+$ docker compose ps
+NAME                        IMAGE                       COMMAND                                           SERVICE       CREATED         STATUS         PORTS
+nginx-proxy-aik-api-1       aaingyunii/aai-api:latest   "uvicorn app.main:app --host 0.0.0.0 --port 80"   aik-api       9 seconds ago   Up 7 seconds   80/tcp
+nginx-proxy-nginx-proxy-1   nginxproxy/nginx-proxy      "/app/docker-entrypoint.sh forego start -r"       nginx-proxy   9 seconds ago   Up 7 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp
+
+# SAVE CSV LOG
+$ sh docker_stats2log.sh nginx-proxy-aik-api-1 > api.log &
+[1] 79415
+[1]  + 79415 suspended (tty output)  sh docker_stats2log.sh nginx-proxy-aik-api-1 > api.log
+
+# STOP SAVE
+$ ps -ef
+# 관련 pid 찾은 뒤
+$ kill {pid}
+
+```
 

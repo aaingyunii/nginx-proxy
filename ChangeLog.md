@@ -25,3 +25,10 @@ minjung - VIRTUAL_HOST=kgb.cia.go.kr
 ### v0.5.0
 - [x] using nGrinder
 - [x] Performance test with scale out-in and up-down
+
+
+### v0.5.1
+
+- [x] add `docker_stats2log.sh` 
+    - docker container resource usage statistics -> csv log
+    
